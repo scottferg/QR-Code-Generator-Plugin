@@ -5,7 +5,7 @@ jetpack.statusBar.append({
   </>,
   onReady: function(widget){
     $(widget).click(function(){
-      jetpack.tabs.open( 'http://qrcode.kaywa.com/img.php?s=8&d=' + escape( jetpack.tabs.focused.url ) )
+      jetpack.tabs.open( 'http://chart.apis.google.com/chart?cht=qr&chs=125x125&chld=H|0&chl=' + escape( jetpack.tabs.focused.url ) )
       jetpack.tabs[ jetpack.tabs.length - 1 ].focus( );
     });
   },
