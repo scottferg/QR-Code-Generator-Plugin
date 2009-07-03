@@ -1,6 +1,6 @@
 jetpack.statusBar.append({
   html: <>
-    <img src="http://www.androidandme.com/favicon.png"/>
+    <img src="logo.png"/>
   </>,
   onReady: function(widget){
     $(widget).click(function(){
