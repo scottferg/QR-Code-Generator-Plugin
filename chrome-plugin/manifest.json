@@ -1,0 +1,19 @@
+{
+  "name": "QR Code Generator", 
+  "version": "0.1",
+  "description": "Displays the QR code for the current URL", 
+  "content_scripts": [
+    {
+      "js": [
+        "background.js"
+      ],
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ]
+    }
+  ], 
+  "toolstrips": [
+    "qr-code-chrome.html"
+  ]
+}

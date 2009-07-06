@@ -1,0 +1,25 @@
+<html>
+<head>
+<script>
+
+var base_url = '';
+
+chrome.self.onConnect.addListener( function( port ) {
+    port.onMessage.addListener( function( data ) {
+        base_url = data.url; 
+    });
+});
+
+function generateCode( )
+{
+    window.open( 'http://chart.apis.google.com/chart?cht=qr&chs=225x225&chl=' + escape( base_url ) );
+}
+
+</script>
+</head>
+<body onclick="generateCode()">
+  <div class="toolstrip-button">
+    <img src="../icon/logo.png" style="width:auto; height:auto">
+  </div>
+</body>
+</html>
