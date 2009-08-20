@@ -3,16 +3,18 @@
 <script>
 
 var base_url = '';
+var base_title = '';
 
 chrome.self.onConnect.addListener( function( port ) {
     port.onMessage.addListener( function( data ) {
         base_url = data.url; 
+        base_title = data.title;
     });
 });
 
 function generateCode( )
 {
-    window.open( 'http://chart.apis.google.com/chart?cht=qr&chs=225x225&chl=' + escape( base_url ) );
+    window.open( 'http://chart.apis.google.com/chart?cht=qr&chs=225x225&chl=' + escape( base_url ), '', 'links=no,scrollbars=no,toolbar=no,width=550,height=550' );
 }
 
 </script>

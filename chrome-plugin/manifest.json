@@ -1,6 +1,6 @@
 {
   "name": "QR Code Generator", 
-  "version": "0.1",
+  "version": "0.2",
   "description": "Displays the QR code for the current URL", 
   "content_scripts": [
     {
